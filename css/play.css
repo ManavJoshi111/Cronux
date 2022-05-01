@@ -1,0 +1,343 @@
+/*main middle box in which whole content is there*/
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&family=Baloo+Tamma+2:wght@500&display=swap");
+#box {
+  width: 95%;
+  background: #1d2938;
+  box-shadow: 0cm 0cm 40px rgba(255, 255, 255, 0.363);
+  align-items: center;
+}
+
+/* navigation bar and logo*/
+header {
+  font-family: Raleway;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  border: 0px solid green;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  border-right: 6px solid rgb(36, 61, 202);
+  border-left: 5px solid rgb(196, 37, 63);
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  box-shadow: 0cm 0cm 40px rgba(7, 5, 37, 0.9);
+}
+header::before {
+  content: "";
+  position: absolute;
+  background: #222e3de0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.navbar {
+  display: block;
+  border: 0px solid blue;
+}
+
+/* list of navbar*/
+
+.navbar a {
+  /* border: 2px solid black; */
+  color: rgb(253, 253, 253);
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 14px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#login {
+  height: 1.8rem;
+  margin-left: 730px;
+  margin-top: 7px;
+  filter: invert(100%);
+  padding-top: -10px;
+  border: 0px solid wheat;
+}
+#login:hover {
+  height: 1.9rem;
+  filter: invert(70%);
+}
+
+.switch {
+  margin-left: 26px;
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#active {
+  opacity: 1;
+  border-top: 2px solid rgba(245, 222, 179, 0.781);
+  border-bottom: 2px solid rgba(245, 222, 179, 0.812);
+  padding: 7px;
+  /* box-shadow: 0px 0px 0px 0px white; */
+  /* opacity: 1; */
+}
+
+#inactive {
+  opacity: 0.6;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+#inactive:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+/* CSS FOR SLIDER  */
+/* CSS OF SLIDER */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(4, 9, 36);
+  -webkit-transition: 0.4s;
+  border: 0px solid whitesmoke;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 20px;
+  left: 1px;
+  bottom: 1px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #9b9898;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #222831;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*animation of navbar list*/
+
+div.borderYtoX a:before,
+div.borderYtoX a:after {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 2px;
+  content: "";
+  background-color: rgb(241, 180, 190);
+  transition: all 0.7s;
+}
+
+div.borderYtoX a:before {
+  left: 0px;
+  top: 0px;
+}
+
+div.borderYtoX a:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+div.borderYtoX a:hover:before,
+div.borderYtoX a:hover:after {
+  z-index: 2;
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+  background: rgba(197, 190, 238, 0.644);
+}
+#logo {
+  height: 5rem;
+  padding-right: 30px;
+  margin-left: 40px;
+}
+
+/* iframe vedio css*/
+
+.iframe {
+  border: 0px solid wheat;
+  margin: 28px;
+  margin-left: 43px;
+  width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+.vdo {
+  border: 0px solid wheat;
+  margin: 20px;
+  width: 98%;
+  height: 97%;
+  border-radius: 13px;
+  box-shadow: 5px 6px 8px 10px rgba(6, 1, 20, 0.386);
+}
+
+/* content from api*/
+
+#title {
+  color: antiquewhite;
+  font-size: 40px;
+  margin: 50px;
+  margin-left: 70px;
+  font-family: "Baloo Tamma 2", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+h2 {
+  color: antiquewhite;
+  font-size: 33px;
+  margin: 50px;
+  margin-left: 70px;
+  font-family: "Baloo Tamma 2", cursive;
+  margin-bottom: 20px;
+}
+.container {
+  border: 0px solid wheat;
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 19px;
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  background-color: #05101e6a;
+  /*background-image: url(../Images/back3.jpeg);*/
+  opacity: 1;
+  width: fit-content;
+  padding-top: 50px;
+  background-size: contain;
+  z-index: 0;
+}
+
+.container:hover {
+  border: 0px solid black;
+
+  border-left: 6px solid rgb(5, 5, 41);
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: rgba(16, 5, 42, 0.001);
+}
+#infocontent {
+  color: rgb(225, 226, 227);
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 110px;
+  margin-right: 90px;
+  margin-top: 0px;
+  border: 0px solid red;
+  width: 50%;
+  text-align: justify;
+  z-index: 1;
+}
+.otherinfo {
+  border: 0px solid rgb(226, 155, 24);
+
+  color: antiquewhite;
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+#language {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+#showtitle {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+#genre {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+#date {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+#rating {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+#adult {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(250, 250, 156);
+}
+
+#poster {
+  border: 0px solid blue;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(136, 135, 135, 0.618);
+}
+#poster {
+  height: 85%;
+  width: 60%;
+}
+
+#playbtn {
+  color: rgb(248, 243, 243);
+  font-size: 15px;
+  background-color: rgba(10, 10, 141, 0.953);
+  height: 28px;
+  width: 70px;
+  margin-left: 40px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+#playbtn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.953);
+}
+
+.lastdiv {
+  margin-bottom: 0px;
+  margin-top: 200px;
+  color: white;
+}
+hr {
+  margin: 70px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
