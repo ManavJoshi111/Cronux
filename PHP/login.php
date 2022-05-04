@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
     <div class="login-box">
         <h1>Login</h1>
-        <form method="POST">
+        <form method="POST" onsubmit="return validation()">
             <div class="user-box">
                 <input type="text" name="uname" required="" id="uname">
                 <label>Username</label>
@@ -55,6 +55,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             <button id="submit" type="submit">Submit</button>
         </form>
     </div>
+
 </body>
 
 </html>

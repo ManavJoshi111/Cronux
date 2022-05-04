@@ -46,21 +46,21 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
     <div class="login-box">
         <h1>Sign Up</h1>
-        <form method="POST" onsubmit="return validate()">
+        <form method="POST" onsubmit="return validate()" name="regform">
             <div class="user-box">
-                <input type="text" name="name" required="">
+                <input type="text" name="name" required="" id="text">
                 <label>Name</label>
             </div>
             <div class="user-box">
-                <input type="text" name="uname" required="">
+                <input type="text" name="uname" required="" id="uname">
                 <label>Username</label>
             </div>
             <div class="user-box">
-                <input type="email" name="email" required="">
+                <input type="email" name="email" required="" id="email">
                 <label>Email ID</label>
             </div>
             <div class="user-box">
-                <input type="tel" name="mono" required="">
+                <input type="tel" name="mono" required="" id="mono">
                 <label>Mobile No</label>
             </div>
             <div class="user-box">
@@ -75,7 +75,24 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             <button id="submit" type="submit">Submit</button>
         </form>
     </div>
-    <script src="../JS/register.js"></script>
+    <script>
+        let uname=document.getElementById('uname');
+        let email=document.getElementById('email');
+        let mono = document.getElementById('mono');
+        function validate()
+        {
+            let reguname=/^[a-z]{1-8}/;
+            let regemail=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2-4}$/;
+            let regmono=/^\d{10}/;
+
+            if(reguname.test(uname) && regemail.eval(email) && regmono.eval(mono))
+                return true;
+            else{
+                alert("An expression is invalid..!\n Please check out the info again");
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
